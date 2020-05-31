@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 <%
 String sid = (String)session.getAttribute("sid");
-if(sid!=null&&sid.equals("asdf")){ //세션이 있으면
+if(sid!=null&&sid.equals("asdf")){ //로그아웃. 세션이 있으면 세션삭제 후 index.jsp로 돌아감
 	HttpSession session1 = request.getSession();
-	session1.invalidate(); //세션 삭제
+	session1.invalidate(); 
 	response.sendRedirect("/index.jsp");
 }
 
@@ -12,7 +12,7 @@ Cookie[] cookies = request.getCookies(); // cookies가 null 수 있음에 주의
 
 String id="";
 String checked=null; //체크박스 여부
-if(cookies!=null){ //쿠키가 있으면
+if(cookies!=null){
 	for(Cookie c:cookies){
 		if(c.getName().equals("cid")){ //cid라는 쿠키가 있으면
 			id=c.getValue(); //id는 해당쿠키값
@@ -23,14 +23,7 @@ if(cookies!=null){ //쿠키가 있으면
 }
 
 %>
-
-
-<%
-	//2. 작업
-%>
-
 										
-
 <!-- 3. 출력 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

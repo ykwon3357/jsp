@@ -3,14 +3,13 @@
 <%
 
 String loginBtn="Login"; //로그인버튼 이름
-String sid= "고객";
-/*String sid = (String)session.getAttribute("sid");
+
+String sid = (String)session.getAttribute("sid");
 if(sid!=null&&sid.equals("asdf")){ //세션있으면 로그인버튼 로그아웃으로 바뀜
-	System.out.println("세션있음!");
 	loginBtn="Logout";
 }else{//세션없으면
 	sid="고객";
-}*/
+}
 %>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -34,11 +33,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="/index.jsp" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="/index.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
     <a href="/loginForm.jsp" class ="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><%=loginBtn %></a>
     <a href="/board.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Board</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Lecture</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+    <a href="/lecture.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Lecture</a>
+    <a href="/contact.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
   </div>
 
   <!-- Navbar on small screens -->
